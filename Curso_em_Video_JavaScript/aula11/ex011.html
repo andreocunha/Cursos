@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    PAÍS : <input type="text" name="nacionalidade" id="nacionalidade">
+    <input type="button" value="enviar" onclick="enviar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function enviar(){
+            var país = window.document.getElementById('nacionalidade')
+            var res = window.document.getElementById('res')
+            res.innerHTML = `<p>Seu país é ${país.value}</p>`
+            if(país.value == 'Brasil'){
+                res.innerHTML += `<p>Você é brasileiro</p>`
+            }
+            else{
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+        }
+    </script>
+</body>
+</html>
